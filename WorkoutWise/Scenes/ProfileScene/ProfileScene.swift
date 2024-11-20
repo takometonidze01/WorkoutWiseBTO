@@ -88,20 +88,20 @@ class ProfileScene: UIViewController {
         supportView.didTap = { [weak self] in
             guard let self else { return }
             
-            self.navigateWebViewScene(url: "https://form.jotform.com/243124714251447")
+            self.navigateWebViewScene(url: "https://form.jotform.com/243245556040451")
         }
         
         termOfUseView.didTap = { [weak self] in
             guard let self else { return }
             
-            self.navigateWebViewScene(url: "")
+            self.navigateWebViewScene(url: "https://www.freeprivacypolicy.com/live/72846d82-68dc-4b8f-bfc5-78de889772cc")
         }
 
         privacyPolicyView.didTap = { [weak self] in
             guard let self else { return }
 
             
-            self.navigateWebViewScene(url: "https://www.freeprivacypolicy.com/live/66c89a53-d5b9-429b-b064-e3e83a26c8a7")
+            self.navigateWebViewScene(url: "https://www.freeprivacypolicy.com/live/99201360-fa0b-4b48-bd90-a44be9c532a3")
         }
         
         
