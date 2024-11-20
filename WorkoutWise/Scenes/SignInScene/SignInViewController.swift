@@ -134,19 +134,18 @@ class SignInViewController: UIViewController {
     }
     
     @objc func didTapOnPrimaryButton() {
-        navigateMainDashboard()
-//        UserDefaultsStorage.shared.changeSignIn(value: true)
-//        let authorizationProvider = ASAuthorizationAppleIDProvider()
-//        let request = authorizationProvider.createRequest()
-//        request.requestedScopes = [.email, .fullName]
-//        
-//        let authorizationController = ASAuthorizationController(authorizationRequests: [request])
-//        authorizationController.delegate = self
-//        authorizationController.performRequests()
+        UserDefaultsStorage.shared.changeSignIn(value: true)
+        let authorizationProvider = ASAuthorizationAppleIDProvider()
+        let request = authorizationProvider.createRequest()
+        request.requestedScopes = [.email, .fullName]
+        
+        let authorizationController = ASAuthorizationController(authorizationRequests: [request])
+        authorizationController.delegate = self
+        authorizationController.performRequests()
     }
     
     @objc func didTapOnSecondaryButton() {
-        let url = "https://www.freeprivacypolicy.com/live/834457b7-e4bf-44f9-a166-e273afff267d"
+        let url = "https://www.freeprivacypolicy.com/live/99201360-fa0b-4b48-bd90-a44be9c532a3"
         
         self.navigateWebViewScene(url: url)
     }
