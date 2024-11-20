@@ -1,10 +1,3 @@
-//
-//  ChooseTimeViewController.swift
-//  Skull
-//
-//  Created by Tako Metonidze on 11/9/24.
-//
-
 import UIKit
 
 protocol ChooseTimeDelegate: AnyObject {

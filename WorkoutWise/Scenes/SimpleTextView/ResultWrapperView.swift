@@ -1,10 +1,3 @@
-//
-//  SimpleTextView.swift
-//  Skull
-//
-//  Created by Tako Metonidze on 11/12/24.
-//
-
 import UIKit
 
 class ResultWrapperView: UIView {

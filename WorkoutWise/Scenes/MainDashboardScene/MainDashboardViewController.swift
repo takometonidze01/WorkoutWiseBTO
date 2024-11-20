@@ -245,7 +245,7 @@ class MainDashboardViewController: UIViewController {
     }
     
     private func getWorkoutStatistics() {
-        let userId = "5a9009f9-8ec0-41d2-8d65-307f086fa7c2"//UserDefaults.standard.string(forKey: "userId") ?? ""
+        let userId = UserDefaults.standard.string(forKey: "userId") ?? ""
         
         NetworkManager.shared.get(url: "https://online-trainer-16e523bc14c8.herokuapp.com/api/v1/workouts/statistics/\(userId)", parameters: nil, headers: nil) { (result: Result<WorkoutData>) in
             switch result {
@@ -277,10 +277,6 @@ class MainDashboardViewController: UIViewController {
             case .success(let historyData):
                 DispatchQueue.main.async {
                     ProgressView.shared.showProgressHud(animate: false)
-//                    let totalTime = exercises.map(\.time).reduce(0, +)
-//                    let timeInString = convertSecondsToTimeString(Double(exercises.time))
-//                    self.timerLabel.text = timeInString
-    
                     
                 }
                 self.historyData = historyData

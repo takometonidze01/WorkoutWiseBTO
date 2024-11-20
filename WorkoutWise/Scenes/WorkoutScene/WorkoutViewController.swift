@@ -1,10 +1,3 @@
-//
-//  WorkoutViewController.swift
-//  Skull
-//
-//  Created by Tako Metonidze on 11/9/24.
-//
-
 import UIKit
 
 class WorkoutViewController: UIViewController {
@@ -368,7 +361,7 @@ class WorkoutViewController: UIViewController {
     }
     
     private func saveWorkout(completion: (() -> Void)? = nil) {
-        workoutParams.userId = "5a9009f9-8ec0-41d2-8d65-307f086fa7c2"//UserDefaults.standard.string(forKey: "userId") ?? ""
+        workoutParams.userId = UserDefaults.standard.string(forKey: "userId") ?? ""
         workoutParams.time = timeOfWorkout
         workoutParams.closeRange = closeRangeHits
         workoutParams.longRangeHits = longRangeHits
