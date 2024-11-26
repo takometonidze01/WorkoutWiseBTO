@@ -85,6 +85,8 @@ class ProfileScene: UIViewController {
         setup()
         layout()
         
+        deleteAccountView.setTitle(UserDefaultsStorage.shared.getGuestValue() ? "Sign In" : "Delete account")
+        
         supportView.didTap = { [weak self] in
             guard let self else { return }
             
@@ -108,7 +110,11 @@ class ProfileScene: UIViewController {
         deleteAccountView.didTap = { [weak self] in
             guard let self else { return }
             
-            handleAccountDeleteAlertTap()
+            if !UserDefaultsStorage.shared.getGuestValue() {
+                handleAccountDeleteAlertTap()
+            } else {
+                handleSignInButton()
+            }
         }
     }
     
@@ -130,6 +136,10 @@ class ProfileScene: UIViewController {
             self.deleteAccountAlertView.isHidden = true
             deleteAccount()
         }
+    }
+    
+    private func handleSignInButton() {
+        changeRootViewController()
     }
     
     private func deleteAccount() {
@@ -155,6 +165,7 @@ class ProfileScene: UIViewController {
         UserDefaultsStorage.shared.changeSignIn(value: false)
         UserDefaultsStorage.shared.changeRegisterAsked(value: false)
         UserDefaultsStorage.shared.changeUserInAppValue(on: false)
+        UserDefaultsStorage.shared.changeGuest(value: false)
         UserDefaults.standard.removeObject(forKey: "AccountCredential")
         UserDefaults.standard.removeObject(forKey: "userId")
 

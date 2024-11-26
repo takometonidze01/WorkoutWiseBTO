@@ -28,11 +28,6 @@
 		03E9B4E42CD5207100489CF8 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03E9B4DC2CD5207100489CF8 /* Montserrat-Medium.ttf */; };
 		03E9B4E52CD5207100489CF8 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03E9B4DD2CD5207100489CF8 /* Montserrat-Regular.ttf */; };
 		03E9B4E62CD5207100489CF8 /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03E9B4DB2CD5207100489CF8 /* Montserrat-Light.ttf */; };
-		03E9B4E92CD5887300489CF8 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E9B4E82CD5887300489CF8 /* GameViewController.swift */; };
-		03E9B4EE2CD6221500489CF8 /* ActiveButtonsContentConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E9B4ED2CD6221500489CF8 /* ActiveButtonsContentConfiguration.swift */; };
-		03E9B4F02CD6223E00489CF8 /* ActiveButtonContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E9B4EF2CD6223E00489CF8 /* ActiveButtonContentView.swift */; };
-		03E9B4F32CD62AEE00489CF8 /* InactiveContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E9B4F22CD62AEE00489CF8 /* InactiveContentView.swift */; };
-		03E9B4F52CD62AF600489CF8 /* InactiveContentConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E9B4F42CD62AF600489CF8 /* InactiveContentConfiguration.swift */; };
 		03E9B4F82CD64D6F00489CF8 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E9B4F72CD64D6F00489CF8 /* ResultViewController.swift */; };
 		243B27142C246DA50025A725 /* GlobalColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243B27132C246DA50025A725 /* GlobalColor.swift */; };
 		243B271A2C24714B0025A725 /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243B27192C24714B0025A725 /* Constraints.swift */; };
@@ -47,7 +42,6 @@
 		2452085D2C243C2C00E9D213 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2452085C2C243C2C00E9D213 /* LaunchScreenViewController.swift */; };
 		245208602C243C7800E9D213 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2452085F2C243C7800E9D213 /* SnapKit */; };
 		245208652C243C9000E9D213 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 245208642C243C9000E9D213 /* Kingfisher */; };
-		245208672C243D4900E9D213 /* PushNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245208662C243D4900E9D213 /* PushNotificationViewController.swift */; };
 		2452086C2C243D7B00E9D213 /* MainDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2452086B2C243D7B00E9D213 /* MainDashboardViewController.swift */; };
 		245208792C243F0900E9D213 /* UITableView+Extenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2452086E2C243F0900E9D213 /* UITableView+Extenstion.swift */; };
 		2452087A2C243F0900E9D213 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2452086F2C243F0900E9D213 /* UIFont+Extension.swift */; };
@@ -90,6 +84,7 @@
 		0368FDB72CD1873100326186 /* UserPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPoint.swift; sourceTree = "<group>"; };
 		0368FDBB2CD39F2800326186 /* ProfileSceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSceneView.swift; sourceTree = "<group>"; };
 		0368FDC02CD4378E00326186 /* UserParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserParams.swift; sourceTree = "<group>"; };
+		039748122CF665A800490AC4 /* Skull.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Skull.entitlements; sourceTree = "<group>"; };
 		03E9B4D92CD5207100489CF8 /* Montserrat-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Black.ttf"; sourceTree = "<group>"; };
 		03E9B4DA2CD5207100489CF8 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		03E9B4DB2CD5207100489CF8 /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.ttf"; sourceTree = "<group>"; };
@@ -97,11 +92,6 @@
 		03E9B4DD2CD5207100489CF8 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		03E9B4DE2CD5207100489CF8 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
 		03E9B4DF2CD5207100489CF8 /* Montserrat-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Thin.ttf"; sourceTree = "<group>"; };
-		03E9B4E82CD5887300489CF8 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
-		03E9B4ED2CD6221500489CF8 /* ActiveButtonsContentConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveButtonsContentConfiguration.swift; sourceTree = "<group>"; };
-		03E9B4EF2CD6223E00489CF8 /* ActiveButtonContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveButtonContentView.swift; sourceTree = "<group>"; };
-		03E9B4F22CD62AEE00489CF8 /* InactiveContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InactiveContentView.swift; sourceTree = "<group>"; };
-		03E9B4F42CD62AF600489CF8 /* InactiveContentConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InactiveContentConfiguration.swift; sourceTree = "<group>"; };
 		03E9B4F72CD64D6F00489CF8 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		243B27132C246DA50025A725 /* GlobalColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalColor.swift; sourceTree = "<group>"; };
 		243B27192C24714B0025A725 /* Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constraints.swift; sourceTree = "<group>"; };
@@ -116,7 +106,6 @@
 		245208582C243BB800E9D213 /* RootAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootAssembly.swift; sourceTree = "<group>"; };
 		2452085A2C243BDB00E9D213 /* PresentationAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationAssembly.swift; sourceTree = "<group>"; };
 		2452085C2C243C2C00E9D213 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
-		245208662C243D4900E9D213 /* PushNotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationViewController.swift; sourceTree = "<group>"; };
 		2452086B2C243D7B00E9D213 /* MainDashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDashboardViewController.swift; sourceTree = "<group>"; };
 		2452086E2C243F0900E9D213 /* UITableView+Extenstion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extenstion.swift"; sourceTree = "<group>"; };
 		2452086F2C243F0900E9D213 /* UIFont+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
@@ -224,42 +213,14 @@
 			path = ProfileSceneView;
 			sourceTree = "<group>";
 		};
-		03E9B4E72CD5886900489CF8 /* GameScene */ = {
-			isa = PBXGroup;
-			children = (
-				03E9B4E82CD5887300489CF8 /* GameViewController.swift */,
-			);
-			path = GameScene;
-			sourceTree = "<group>";
-		};
 		03E9B4EA2CD621AB00489CF8 /* ContentView */ = {
 			isa = PBXGroup;
 			children = (
 				03075E182CE407FB00A88B0F /* TitleContentView */,
 				03075E172CE402C400A88B0F /* StatisticContentView */,
 				03075E0B2CE3FD5500A88B0F /* HistoryContentView */,
-				03E9B4EC2CD621C000489CF8 /* InactiveButtonsContentView */,
-				03E9B4EB2CD621B300489CF8 /* ActiveButtonsContentView */,
 			);
 			path = ContentView;
-			sourceTree = "<group>";
-		};
-		03E9B4EB2CD621B300489CF8 /* ActiveButtonsContentView */ = {
-			isa = PBXGroup;
-			children = (
-				03E9B4ED2CD6221500489CF8 /* ActiveButtonsContentConfiguration.swift */,
-				03E9B4EF2CD6223E00489CF8 /* ActiveButtonContentView.swift */,
-			);
-			path = ActiveButtonsContentView;
-			sourceTree = "<group>";
-		};
-		03E9B4EC2CD621C000489CF8 /* InactiveButtonsContentView */ = {
-			isa = PBXGroup;
-			children = (
-				03E9B4F22CD62AEE00489CF8 /* InactiveContentView.swift */,
-				03E9B4F42CD62AF600489CF8 /* InactiveContentConfiguration.swift */,
-			);
-			path = InactiveButtonsContentView;
 			sourceTree = "<group>";
 		};
 		03E9B4F62CD64D6500489CF8 /* ResultView */ = {
@@ -281,6 +242,7 @@
 		2452082E2C2438FD00E9D213 = {
 			isa = PBXGroup;
 			children = (
+				039748122CF665A800490AC4 /* Skull.entitlements */,
 				245208392C2438FD00E9D213 /* WorkoutWise */,
 				245208382C2438FD00E9D213 /* Products */,
 			);
@@ -335,13 +297,11 @@
 				034B33D72CDEAE9100387926 /* ChooseTime */,
 				03E9B4F62CD64D6500489CF8 /* ResultView */,
 				03E9B4EA2CD621AB00489CF8 /* ContentView */,
-				03E9B4E72CD5886900489CF8 /* GameScene */,
 				0368FDBF2CD42D0D00326186 /* ProfileSceneView */,
 				0355BBED2CC2BD620013AC13 /* WebView */,
 				24FE1B2D2C6B94B400960D6D /* AlertView */,
 				24A82FED2C36AA8F00845436 /* ProfileScene */,
 				245208552C2439C400E9D213 /* LaunchScene */,
-				245208562C2439EF00E9D213 /* PushNotificationViewController */,
 				243B271D2C2478110025A725 /* SignInScene */,
 				2452086A2C243D5600E9D213 /* MainDashboardScene */,
 			);
@@ -406,14 +366,6 @@
 				2452085C2C243C2C00E9D213 /* LaunchScreenViewController.swift */,
 			);
 			path = LaunchScene;
-			sourceTree = "<group>";
-		};
-		245208562C2439EF00E9D213 /* PushNotificationViewController */ = {
-			isa = PBXGroup;
-			children = (
-				245208662C243D4900E9D213 /* PushNotificationViewController.swift */,
-			);
-			path = PushNotificationViewController;
 			sourceTree = "<group>";
 		};
 		2452086A2C243D5600E9D213 /* MainDashboardScene */ = {
@@ -558,7 +510,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				03075E1C2CE4080A00A88B0F /* TitleContentConfiguration.swift in Sources */,
-				03E9B4F02CD6223E00489CF8 /* ActiveButtonContentView.swift in Sources */,
 				243B271F2C24781B0025A725 /* SignInViewController.swift in Sources */,
 				2452087E2C243F0900E9D213 /* UITableViewCell+Extenstion.swift in Sources */,
 				03075E142CE402B700A88B0F /* StatisticContentView.swift in Sources */,
@@ -574,15 +525,12 @@
 				24FE1B332C6CC57700960D6D /* UserDefaultsStorage.swift in Sources */,
 				24FE1B262C6A121700960D6D /* ApiDataField.swift in Sources */,
 				2452083B2C2438FD00E9D213 /* AppDelegate.swift in Sources */,
-				03E9B4F52CD62AF600489CF8 /* InactiveContentConfiguration.swift in Sources */,
 				2452087B2C243F0900E9D213 /* UIViewController+Extension.swift in Sources */,
 				24A82FF12C36AC8200845436 /* ListSection.swift in Sources */,
 				245208802C243F0900E9D213 /* UITextField+Extension.swift in Sources */,
-				03E9B4F32CD62AEE00489CF8 /* InactiveContentView.swift in Sources */,
 				0368FDB82CD1873100326186 /* UserPoint.swift in Sources */,
 				245208792C243F0900E9D213 /* UITableView+Extenstion.swift in Sources */,
 				245208812C243F0900E9D213 /* String+Extension.swift in Sources */,
-				03E9B4E92CD5887300489CF8 /* GameViewController.swift in Sources */,
 				2452085B2C243BDB00E9D213 /* PresentationAssembly.swift in Sources */,
 				243B27142C246DA50025A725 /* GlobalColor.swift in Sources */,
 				034B33DC2CDFEF7600387926 /* WorkoutViewController.swift in Sources */,
@@ -592,8 +540,6 @@
 				2452087F2C243F0900E9D213 /* UIColor+Extension.swift in Sources */,
 				243B271A2C24714B0025A725 /* Constraints.swift in Sources */,
 				245208822C243F0900E9D213 /* UIView+Extension.swift in Sources */,
-				245208672C243D4900E9D213 /* PushNotificationViewController.swift in Sources */,
-				03E9B4EE2CD6221500489CF8 /* ActiveButtonsContentConfiguration.swift in Sources */,
 				2452086C2C243D7B00E9D213 /* MainDashboardViewController.swift in Sources */,
 				03E9B4F82CD64D6F00489CF8 /* ResultViewController.swift in Sources */,
 				243B271C2C2473C60025A725 /* CGFloat+Extensions.swift in Sources */,
@@ -750,7 +696,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_ENTITLEMENTS = Skull.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
@@ -784,7 +730,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_ENTITLEMENTS = Skull.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";

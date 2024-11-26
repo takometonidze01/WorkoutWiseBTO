@@ -26,6 +26,7 @@ public enum Image: String, CaseIterable, Codable, ImageRepresentable {
     case signIn = "sign-in"
     case calendar = "calendar"
     case repeatIcon = "repeat"
+    case appleLogo = "apple.logo"
     
     public func asImage() -> UIImage? {
         return UIImage(image: self)

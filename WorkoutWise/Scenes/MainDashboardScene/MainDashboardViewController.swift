@@ -64,8 +64,12 @@ class MainDashboardViewController: UIViewController {
         self.presentationAssembly = presentationAssembly
         super.init(nibName: nil, bundle: nil)
         
-        getWorkoutStatistics()
-        getHistory()
+        if !UserDefaultsStorage.shared.getGuestValue() {
+            getWorkoutStatistics()
+            getHistory()
+        } else {
+            self.updateDataSource()
+        }
     }
     
     required init?(coder: NSCoder) {
@@ -156,8 +160,10 @@ class MainDashboardViewController: UIViewController {
         guard let self else {
           return
         }
+          var workoutData = !UserDefaultsStorage.shared.getGuestValue() ? workoutStats : WorkoutData(id: UUID().uuidString, time: 0, closeRange: 0, midRangeHits: 0, longRangeHits: 0, hitCount: 0, total: 0, createdAt: "", userId: "")
 
-          let configuration = StatisticContentConfiguration(statistics: workoutStats)
+
+          let configuration = StatisticContentConfiguration(statistics: workoutData)
         cell.contentConfiguration = configuration
       }
     }
@@ -368,8 +374,10 @@ extension MainDashboardViewController: MainDelegate {
         workoutStats = nil
         historyData = []
         
-        getHistory()
-        getWorkoutStatistics()
+        if !UserDefaultsStorage.shared.getGuestValue() {
+            getHistory()
+            getWorkoutStatistics()
+        }
     }
 }
 

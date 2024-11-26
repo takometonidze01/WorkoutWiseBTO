@@ -30,12 +30,17 @@ class SignInViewController: UIViewController {
     
     private lazy var primaryButton: UIButton = {
         let view = UIButton(frame: .zero)
-        view.backgroundColor = red
+        view.configuration = .filled()
+        view.configuration?.baseBackgroundColor = .white
+        view.backgroundColor = .white
         view.makeRoundedCorners(.allCorners, withRadius: 12 * Constraints.yCoeff)
-        view.setTitleColor(white, for: .normal)
-        view.titleLabel?.font = .medium14()
-        view.setTitle("Sign Up", for: .normal)
+        view.setTitleColor(.black, for: .normal)
+        view.titleLabel?.font = .medium12()
+        view.setTitle("Sign In with Apple", for: .normal)
         view.addTarget(self, action: #selector(didTapOnPrimaryButton), for: .touchUpInside)
+        view.setImage(UIImage(systemName: "apple.logo")?.withTintColor(.black, renderingMode: .alwaysOriginal), for: .normal)
+        view.configuration?.imagePadding = 10
+        view.dropShadow()
         return view
     }()
     
@@ -63,7 +68,21 @@ class SignInViewController: UIViewController {
         
         view.attributedText = attributedTitle
         
-            //TODO: - add click on terms and privacy policy
+        view.isUserInteractionEnabled = true
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapLabel(_:)))
+        view.addGestureRecognizer(tapGesture)
+        return view
+    }()
+    
+    private lazy var guestButton: UIButton = {
+        let view = UIButton(frame: .zero)
+        view.backgroundColor = gray
+        view.makeRoundedCorners(.allCorners, withRadius: 12 * Constraints.yCoeff)
+        view.setTitleColor(white, for: .normal)
+        view.titleLabel?.font = .medium12()
+        view.setTitle("log in as guest", for: .normal)
+        view.addTarget(self, action: #selector(didTapOnGuestButton), for: .touchUpInside)
+        view.dropShadow()
         return view
     }()
     
@@ -93,12 +112,24 @@ class SignInViewController: UIViewController {
         navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
+    @objc private func didTapLabel(_ sender: UITapGestureRecognizer) {
+        let url = "https://www.freeprivacypolicy.com/live/99201360-fa0b-4b48-bd90-a44be9c532a3"
+        
+        self.navigateWebViewScene(url: url)
+    }
+    
     private func setup() {
         view.addSubview(imageView)
         view.addSubview(titleLabel)
         view.addSubview(descriptionLabel)
         view.addSubview(primaryButton)
+        view.addSubview(guestButton)
         view.addSubview(secondaryButton)
+    }
+    
+    private func navigateWebViewScene(url: String) {
+        let vc = presentationAssembly.navigateWebView(url: url, closeButtonIsHidden: false)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     private func layout() {
@@ -119,9 +150,16 @@ class SignInViewController: UIViewController {
         }
         
         primaryButton.snp.remakeConstraints { make in
+            make.bottom.equalTo(guestButton.snp.top).offset(-CGFloat.spacing7.scaledHeight)
+            make.centerX.equalToSuperview()
+            make.leading.trailing.equalToSuperview().inset(CGFloat.spacing4.scaledWidth)
+            make.height.equalTo(CGFloat(40.0).scaledWidth)
+        }
+        
+        guestButton.snp.remakeConstraints { make in
             make.bottom.equalToSuperview().offset(-CGFloat.spacing3.scaledHeight)
             make.centerX.equalToSuperview()
-            make.width.equalTo(CGFloat(170.0).scaledWidth)
+            make.leading.trailing.equalToSuperview().inset(CGFloat.spacing4.scaledWidth)
             make.height.equalTo(CGFloat(40.0).scaledWidth)
         }
         
@@ -134,6 +172,7 @@ class SignInViewController: UIViewController {
     }
     
     @objc func didTapOnPrimaryButton() {
+        UserDefaultsStorage.shared.changeGuest(value: false)
         UserDefaultsStorage.shared.changeSignIn(value: true)
         let authorizationProvider = ASAuthorizationAppleIDProvider()
         let request = authorizationProvider.createRequest()
@@ -148,12 +187,6 @@ class SignInViewController: UIViewController {
         let url = "https://www.freeprivacypolicy.com/live/99201360-fa0b-4b48-bd90-a44be9c532a3"
         
         self.navigateWebViewScene(url: url)
-    }
-    
-    
-    private func navigateWebViewScene(url: String) {
-        let vc = presentationAssembly.navigateWebView(url: url, closeButtonIsHidden: false)
-        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     private func showAlert(title: String, description: String?) {
@@ -195,6 +228,10 @@ class SignInViewController: UIViewController {
     private func navigateMainDashboard() {
         UserDefaultsStorage.shared.changeUserInAppValue(on: true)
         UserDefaultsStorage.shared.changeSignIn(value: true)
+        setRootVc()
+    }
+    
+    private func setRootVc() {
         let vc = presentationAssembly.mainDashboardScene()
         let navigationController = UINavigationController(rootViewController: vc)
         let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene
@@ -202,6 +239,11 @@ class SignInViewController: UIViewController {
             window.rootViewController = navigationController
             window.makeKeyAndVisible()
         }
+    }
+    
+    @objc func didTapOnGuestButton() {
+        UserDefaultsStorage.shared.changeGuest(value: true)
+        setRootVc()
     }
 }
 

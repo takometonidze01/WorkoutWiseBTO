@@ -346,9 +346,14 @@ class WorkoutViewController: UIViewController {
     }
     
     private func navigateToResultScreen() {
-        saveWorkout { [weak self] in
-            guard let self else { return }
-            self.delegate?.resetDashboard()
+        if !UserDefaultsStorage.shared.getGuestValue() {
+            saveWorkout { [weak self] in
+                guard let self else { return }
+                self.delegate?.resetDashboard()
+                let vc = presentationAssembly.resultViewController(workout: WorkoutData(id: "", time: timeOfWorkout, closeRange: closeRangeHits, midRangeHits: midRangeHits, longRangeHits: longRangeHits, hitCount: totalHits, total: misses, createdAt: "", userId: ""), delegate: nil)
+                self.navigationController?.pushViewController(vc, animated: false)
+            }
+        } else {
             let vc = presentationAssembly.resultViewController(workout: WorkoutData(id: "", time: timeOfWorkout, closeRange: closeRangeHits, midRangeHits: midRangeHits, longRangeHits: longRangeHits, hitCount: totalHits, total: misses, createdAt: "", userId: ""), delegate: nil)
             self.navigationController?.pushViewController(vc, animated: false)
         }
